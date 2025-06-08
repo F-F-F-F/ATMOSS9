@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mi Web con Imagen GIF</title>
+  <title>Acceso Alienígena</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+    }
+    .btn-img {
+      margin: 20px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .btn-img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+  <script>
+    function pedirContraseña(claveCorrecta, destino) {
+      const input = prompt("INGRESA CÓDIGO DE ACCESO:");
+      if (input === claveCorrecta) {
+        window.location.href = destino;
+      } else if (input !== null) {
+        alert("CÓDIGO INCORRECTO");
+      }
+    }
+  </script>
 </head>
 <body>
-  <h1>Hola desde GitHub Pages</h1>
-  <p>Esta es una imagen alojada en el mismo repositorio:</p>
-  
-  <img src="img/15.gif" alt="Animación">
+  <h1>🛸 PORTAL DE ACCESO RESTRINGIDO 🛸</h1>
+
+  <img src="img/BTN_1.png" class="btn-img" width="200" onclick="pedirContraseña('X7A9', 'archivo1.html')">
+  <br>
+  <img src="img/BTN_2.png" class="btn-img" width="200" onclick="pedirContraseña('L2FQ', 'archivo2.html')">
+  <br>
+  <img src="img/BTN_3.png" class="btn-img" width="200" onclick="pedirContraseña('N8VZ', 'archivo3.html')">
+  <br>
+  <img src="img/BTN_4.png" class="btn-img" width="200" onclick="pedirContraseña('Q5WT', 'archivo4.html')">
 
 </body>
 </html>
